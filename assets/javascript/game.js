@@ -43,6 +43,17 @@ $(document).ready(function () {
         },
     ];
 
+    
+
+
+
+
+
+
+
+
+
+
     $(".char").on("click", function () {
         var charVal = $(this).attr('value');
         console.log(charVal);

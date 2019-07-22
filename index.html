@@ -12,66 +12,54 @@
 
 
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <div id="game" class="container">
-        <h1>Star Wars RPG</h1>
-        <div id="available-characters" class="card">
-            <div class="char" id="char-1" value="0">
-                <h1>Luke Skywalker</h1>
-                <img src="./assets/images/skywalker_luke.jpg" alt="">
-                <div class="stats">
-                    <p class="HP">100</p>
-                    <p class="AP">10</p>
-                    <p class="CAP">5</p>
-                </div>
-            </div>
-            <div class="char" id="char-2" value="1">
-                <h1>Han Solo</h1>
-                <img src="./assets/images/han_solo.jpg" alt="">
-                <div class="stats">
-                    <p class="HP">100</p>
-                    <p class="AP">10</p>
-                    <p class="CAP">5</p>
-                </div>
-            </div>
-            <div class="char" id="char-3" value="2">
-                <h1>Aayla Secura</h1>
-                <img src="./assets/images/aayla_secura.jpg" alt="">
-                <div class="stats">
-                    <p class="HP">100</p>
-                    <p class="AP">10</p>
-                    <p class="CAP">5</p>
-                </div>
-            </div>
-            <div class="char" id="char-4" value="3">
-                <h1>Mace Windu</h1>
-                <img src="./assets/images/mace_windu.jpg" alt="">
-                <div class="stats">
-                    <p class="HP">100</p>
-                    <p class="AP">10</p>
-                    <p class="CAP">5</p>
-                </div>
+        <div class="row">
+            <div class="col" id="game-title">
+                <h1>Crystal Collectors</h1>
             </div>
         </div>
-        <div id="your-character" class="card">
-            <h1>Your character</h1>
+        <div class="row">
+            <div class="col" id="game-instructions">
+                <h1>Instructions</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo suscipit, debitis cumque
+                    numquam ipsa repellat at beatae optio officiis doloremque voluptate earum ipsam tempora
+                    reprehenderit voluptas aut mollitia expedita.</p>
+            </div>
         </div>
-        <div id="enemies" class="card">
-            <h1>Enemies</h1>
+        <div class="row">
+            <div class="col">
+                <p id="targetNumber">Target Number</p>
+            </div>
+            <div class="col">
+                <p id="wins">Wins</p>
+                <p id="losses">Losses</p>
+            </div>
         </div>
-        <div id="fight-section" class="card">
-            <h1>Fight Section</h1> <button id="btn-attack">Attack</button>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary" id="btn-1">Sapphire</button>
+                <button type="button" class="btn btn-success" id="btn-2">Emerald</button>
+                <button type="button" class="btn btn-danger" id="btn-3">Ruby</button>
+                <button type="button" class="btn btn-warning" id="btn-4">Topaz</button>
+            </div>
         </div>
-        <div id="defender" class="card">
-            <h1>Defender</h1>
-        </div>
-        <div id="combat-log" class="card">
-            <h1>Combat Log</h1>
+        <div class="row">
+            <div class="col">
+                <h1 id="totalScore">Total Score</h1>
+            </div>
         </div>
     </div>
+
+
+
+
     <script src="./assets/javascript/game.js"></script>
 </body>
+
 </html>
