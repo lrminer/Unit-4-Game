@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cystal Collectors</title>
+    <title>Crystal Collectors</title>
 
     <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -38,16 +38,16 @@
                 <p id="displayTargetNumber">?</p>
             </div>
             <div class="col">
-                <p id="displayWins">Wins: </p>
-                <p id="displayLosses">Losses: </p>
+                <p id="wins">Wins: <span id="displayWins">0</span></p>
+                <p id="losses">Losses: <span id="displayLosses">0</span></p>
             </div>
         </div>
         <div class="row">
             <div class="col" id="gem-buttons">
-                <button type="button" class="btn btn-primary" id="btn-1">Sapphire</button>
-                <button type="button" class="btn btn-success" id="btn-2">Emerald</button>
-                <button type="button" class="btn btn-danger" id="btn-3">Ruby</button>
-                <button type="button" class="btn btn-warning" id="btn-4">Topaz</button>
+                <button type="button" class="btn btn-primary" id="btn-1" data-value="0">Sapphire</button>
+                <button type="button" class="btn btn-success" id="btn-2" data-value="1">Emerald</button>
+                <button type="button" class="btn btn-danger" id="btn-3" data-value="2">Ruby</button>
+                <button type="button" class="btn btn-warning" id="btn-4" data-value="3">Topaz</button>
             </div>
         </div>
         <div class="row">

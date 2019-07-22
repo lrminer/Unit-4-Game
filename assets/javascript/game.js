@@ -13,6 +13,7 @@ $(document).ready(function () {
     let dmgTake = 0;
     let player = {};
 
+    
 
     let characters = [{
             name: "Luke Skywalker",
@@ -52,6 +53,9 @@ $(document).ready(function () {
             console.log(buttonValue);
         }
     };
+
+
+
     let initializeBtnValueOne = function () {
         let pickOne = Math.floor(Math.random() * buttonValue.length);
         buttonValue[pickOne] = 1;
@@ -75,8 +79,11 @@ $(document).ready(function () {
 
     $("#gem-buttons").on("click", "button", function() {
         reset = false;
-        value = $(this).
+        value = $(this).attr("data-value");
+        console.log(value);
         console.log("reset = " + reset);
+
+        $("#displayScore").text(buttonValue[value]);
         
     });
 
