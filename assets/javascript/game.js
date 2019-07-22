@@ -43,7 +43,42 @@ $(document).ready(function () {
         },
     ];
 
+    let reset = true;
+    console.log("reset = " + reset);
+    let buttonValue = [0, 0, 0, 0];
+    let initializeButtons = function() {
+        for (let i = 0; i < buttonValue.length; i++) {
+            buttonValue[i] = (Math.floor(Math.random() * 12) + 1) ;
+            console.log(buttonValue);
+        }
+    };
+    let initializeBtnValueOne = function () {
+        let pickOne = Math.floor(Math.random() * buttonValue.length);
+        buttonValue[pickOne] = 1;
+    }
+
+    initializeButtons();
+
+    if (buttonValue.includes(1)) {
+        alert ("You are already including the number 1");
+    } else {
+        initializeBtnValueOne();
+    }
+
     
+    
+    console.log(buttonValue);
+
+
+
+
+
+    $("#gem-buttons").on("click", "button", function() {
+        reset = false;
+        value = $(this).
+        console.log("reset = " + reset);
+        
+    });
 
 
 

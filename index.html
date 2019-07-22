@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Star Wars RPG</title>
+    <title>Cystal Collectors</title>
 
     <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -34,15 +34,16 @@
         </div>
         <div class="row">
             <div class="col">
-                <p id="targetNumber">Target Number</p>
+                <p id="targetNumber">Target Number:</p>
+                <p id="displayTargetNumber">?</p>
             </div>
             <div class="col">
-                <p id="wins">Wins</p>
-                <p id="losses">Losses</p>
+                <p id="displayWins">Wins: </p>
+                <p id="displayLosses">Losses: </p>
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col" id="gem-buttons">
                 <button type="button" class="btn btn-primary" id="btn-1">Sapphire</button>
                 <button type="button" class="btn btn-success" id="btn-2">Emerald</button>
                 <button type="button" class="btn btn-danger" id="btn-3">Ruby</button>
@@ -51,7 +52,8 @@
         </div>
         <div class="row">
             <div class="col">
-                <h1 id="totalScore">Total Score</h1>
+                <h1 id="totalScore">Total Score:</h1>
+                <h1 id="displayScore">0</h1>
             </div>
         </div>
     </div>
