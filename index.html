@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Star Wars RPG</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div id="game" class="container">
+        <h1>Star Wars RPG</h1>
+        <div id="available-characters" class="card">
+            <div class="char" id="char-1" value="0">
+                <h1>Luke Skywalker</h1>
+                <img src="./assets/images/skywalker_luke.jpg" alt="">
+                <div class="stats">
+                    <p class="HP">100</p>
+                    <p class="AP">10</p>
+                    <p class="CAP">5</p>
+                </div>
+            </div>
+            <div class="char" id="char-2" value="1">
+                <h1>Han Solo</h1>
+                <img src="./assets/images/han_solo.jpg" alt="">
+                <div class="stats">
+                    <p class="HP">100</p>
+                    <p class="AP">10</p>
+                    <p class="CAP">5</p>
+                </div>
+            </div>
+            <div class="char" id="char-3" value="2">
+                <h1>Aayla Secura</h1>
+                <img src="./assets/images/aayla_secura.jpg" alt="">
+                <div class="stats">
+                    <p class="HP">100</p>
+                    <p class="AP">10</p>
+                    <p class="CAP">5</p>
+                </div>
+            </div>
+            <div class="char" id="char-4" value="3">
+                <h1>Mace Windu</h1>
+                <img src="./assets/images/mace_windu.jpg" alt="">
+                <div class="stats">
+                    <p class="HP">100</p>
+                    <p class="AP">10</p>
+                    <p class="CAP">5</p>
+                </div>
+            </div>
+        </div>
+        <div id="your-character" class="card">
+            <h1>Your character</h1>
+        </div>
+        <div id="enemies" class="card">
+            <h1>Enemies</h1>
+        </div>
+        <div id="fight-section" class="card">
+            <h1>Fight Section</h1> <button id="btn-attack">Attack</button>
+        </div>
+        <div id="defender" class="card">
+            <h1>Defender</h1>
+        </div>
+        <div id="combat-log" class="card">
+            <h1>Combat Log</h1>
+        </div>
+    </div>
+    <script src="./assets/javascript/game.js"></script>
+</body>
+</html>
