@@ -15,10 +15,12 @@ $(document).ready(function () {
 
 
 
-    
+
     let targetNumber = 1000;
     let buttonValue = [0, 0, 0, 0];
     let totalScore = 0;
+    let wins = 0;
+    let losses = 0;
 
     let reset = true;
     console.log("reset = " + reset);
@@ -38,15 +40,27 @@ $(document).ready(function () {
     let initializeBtnValueOne = function () {
         let pickOne = Math.floor(Math.random() * buttonValue.length);
         buttonValue[pickOne] = 1;
-    }
+    };
 
-    initializeTarget();
-    initializeButtons();
-    if (buttonValue.includes(1)) {
-        console.log("You are already including the number 1");
-    } else {
-        initializeBtnValueOne();
-    }
+    let resetFunction = function () {
+        totalScore = 0;
+        $("#displayScore").text(totalScore);
+        if (reset) {
+            initializeTarget();
+            initializeButtons();
+            if (buttonValue.includes(1)) {
+                console.log("You are already including the number 1");
+            } else {
+                initializeBtnValueOne();
+            }
+            reset = false;
+            alert("The game has been reset");
+        }
+    };
+
+    resetFunction();
+
+
 
 
 
@@ -57,13 +71,31 @@ $(document).ready(function () {
 
 
     $("#gem-buttons").on("click", "button", function () {
-        reset = false;
+        $("#status").text("");
         value = $(this).attr("data-value");
         console.log(value);
         console.log("reset = " + reset);
         totalScore += buttonValue[value];
         $("#displayScore").text(totalScore);
+        if (totalScore === targetNumber) {
+            wins++;
+            $("#status").text("YOU WIN!");
+            $("#displayWins").text(wins);
+            reset = true;
+            resetFunction();
+            
 
+
+        }
+        if (totalScore > targetNumber) {
+            losses++;
+            $("#status").text("YOU LOSE");
+            $("#displayLosses").text(losses);
+            reset = true;
+            resetFunction();
+            
+
+        }
     });
 
 
