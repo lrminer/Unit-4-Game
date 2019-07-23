@@ -21,7 +21,7 @@ $(document).ready(function () {
     let totalScore = 0;
     let wins = 0;
     let losses = 0;
-
+    let winOrLose = false;
     let reset = true;
     console.log("reset = " + reset);
 
@@ -54,77 +54,41 @@ $(document).ready(function () {
                 initializeBtnValueOne();
             }
             reset = false;
-            alert("The game has been reset");
+            winOrLose = false;
         }
     };
 
     resetFunction();
 
-
-
-
-
     console.log(buttonValue);
-
-
-
-
 
     $("#gem-buttons").on("click", "button", function () {
         $("#status").text("");
         value = $(this).attr("data-value");
-        console.log(value);
-        console.log("reset = " + reset);
         totalScore += buttonValue[value];
         $("#displayScore").text(totalScore);
+        
+        //winning (wins++)
         if (totalScore === targetNumber) {
             wins++;
-            $("#status").text("YOU WIN!");
+            $("#status").text("YOU WIN! PRESS R TO CONTINUE");
             $("#displayWins").text(wins);
-            reset = true;
-            resetFunction();
+            winOrLose = true;
             
-
-
         }
+        //losing (loses++)
         if (totalScore > targetNumber) {
             losses++;
-            $("#status").text("YOU LOSE");
+            $("#status").text("YOU LOSE! PRESS R TO CONTINUE");
             $("#displayLosses").text(losses);
-            reset = true;
-            resetFunction();
-            
-
+            winOrLose = true;
         }
     });
-
-
-
-
-
-
-
-
-
-
-    // $(".char").on("click", function () {
-    //     var charVal = $(this).attr('value');
-    //     console.log(charVal);
-    //     console.log(characters[charVal].name);
-
-    //     var charCard = $(this).html();
-    //     console.log(charCard);
-
-
-
-
-    //     //displays object details but does not 
-    //     $("#your-character").append(characters[charVal].name);
-    //     $("#your-character").append(characters[charVal].healthPoints);
-    //     $("#your-character").append(characters[charVal].attackPower);
-    //     $("#your-character").append(characters[charVal].counterAttack);
-
-    // });
-
-
+    $(document).on("keyup", function(e) {
+        if (e.key === "r" && winOrLose === true) {
+            console.log ("You pressed r to restart the game");
+            reset = true;
+            resetFunction();
+        }
+    });
 });
