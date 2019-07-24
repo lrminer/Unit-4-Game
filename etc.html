@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+        <div class="col" id="title">
+            <h1>Crystal Collectors</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" id="instructions">
+            <h2>Instructions</h2>
+            <p>You will be give a random target number at the beginning of each round.</p>
+            <p>There are four crystals below. Every round, they will be assigned a random value.</p>
+            <p>The value of each crystal will be hidden until you click on it. Be sure to use mental math to determine
+                the value of the crystal.</p>
+            <p>You win the game by matching the the score to the target number, without going over. Going over the
+                targer number will result in a loss.</p>
+            <h1 id="status"></h1>
+        </div>
+        <div class="col" id="scoreboard">
+            <div class="row">
+                <div class="col">
+                    <p id="wins">Wins:</p>
+                </div>
+                <div class="col">
+                    <p id="losses">Losses:</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p id="displayWins">0</p>
+                </div>
+                <div class="col">
+                    <p id="displayLosses">0</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p id="totalScore">Total Score:</p>
+                </div>
+                <div class="col">
+                    <p id="targetNumber">Target Number:</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p id="displayScore">0</p>
+
+                </div>
+                <div class="col">
+                    <p id="displayTargetNumber">?</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button type="button" class="btn btn-lg btn-outline-primary" id="btn-1" data-value="0"><i
+                    class="fas fa-gem"></i></button>
+            <button type="button" class="btn btn-lg btn-outline-success" id="btn-2" data-value="1"><i
+                    class="fas fa-gem"></i></button>
+            <button type="button" class="btn btn-lg btn-outline-danger" id="btn-3" data-value="2"><i
+                    class="fas fa-gem"></i></button>
+            <button type="button" class="btn btn-lg btn-outline-warning" id="btn-4" data-value="3"><i
+                    class="fas fa-gem"></i></button>
+        </div>
+    </div>
+</div>

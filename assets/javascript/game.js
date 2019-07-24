@@ -84,6 +84,7 @@ $(document).ready(function () {
             winOrLose = true;
         }
     });
+    
     $(document).on("keyup", function(e) {
         if (e.key === "r" && winOrLose === true) {
             console.log ("You pressed r to restart the game");
