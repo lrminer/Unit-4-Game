@@ -1,17 +1,13 @@
 # Unit-4-Game
 
-## A LONG TIME AGO IN A GALAXY FAR, FAR AWAY....
+## Crystal Collectors
+
+### Instructions
+You will be give a random target number at the beginning of each round.
+There are four crystals below. Every round, they will be assigned a random value.
+The value of each crystal will be hidden until you click on it. Be sure to use mental math to determine the value of the crystal.
+You win the game by matching the the score to the target number, without going over. Going over the targer number will result in a loss.
 
 
-### images used
-
-
-### parts i need to include
-* your character
-* 4 characters with 3 attributes:
-    1. HP - Health Points
-    2. AP - Attack Power (When you are controlling a character you use this value to determine the strength of your attacks)
-    3. CAP - Counter Attack Power (When you are not controlling this character it uses this value instead of the AP)
-    
 
 

@@ -44,6 +44,7 @@ $(document).ready(function () {
 
     let resetFunction = function () {
         totalScore = 0;
+        $("#status").text("");
         $("#displayScore").text(totalScore);
         if (reset) {
             initializeTarget();
@@ -63,31 +64,33 @@ $(document).ready(function () {
     console.log(buttonValue);
 
     $("#gem-buttons").on("click", "button", function () {
-        $("#status").text("");
-        value = $(this).attr("data-value");
-        totalScore += buttonValue[value];
-        $("#displayScore").text(totalScore);
-        
-        //winning (wins++)
-        if (totalScore === targetNumber) {
-            wins++;
-            $("#status").text("YOU WIN! PRESS R TO CONTINUE");
-            $("#displayWins").text(wins);
-            winOrLose = true;
-            
-        }
-        //losing (loses++)
-        if (totalScore > targetNumber) {
-            losses++;
-            $("#status").text("YOU LOSE! PRESS R TO CONTINUE");
-            $("#displayLosses").text(losses);
-            winOrLose = true;
+        if (winOrLose === false) {
+            $("#status").text("");
+            value = $(this).attr("data-value");
+            totalScore += buttonValue[value];
+            $("#displayScore").text(totalScore);
+
+            //winning (wins++)
+            if (totalScore === targetNumber) {
+                wins++;
+                $("#status").text("YOU WIN! PRESS R TO CONTINUE");
+                $("#displayWins").text(wins);
+                winOrLose = true;
+
+            }
+            //losing (loses++)
+            if (totalScore > targetNumber) {
+                losses++;
+                $("#status").text("YOU LOSE! PRESS R TO CONTINUE");
+                $("#displayLosses").text(losses);
+                winOrLose = true;
+            }
         }
     });
-    
-    $(document).on("keyup", function(e) {
+
+    $(document).on("keyup", function (e) {
         if (e.key === "r" && winOrLose === true) {
-            console.log ("You pressed r to restart the game");
+            console.log("You pressed r to restart the game");
             reset = true;
             resetFunction();
         }
